@@ -312,7 +312,7 @@ export default function Home() {
               a: '中等强度够用，重度用户需配合 credits 补充。够用条件：每天编码 ≤4h，日常用 GPT-5.4-mini，CI/CD 走 API Key。不够用时：切换 mini → 购买 credits → 超额用 API Key → 核心成员升 Pro。',
             },
             {
-              q: 'Q2：官方价格比 OpenRouter 便宜吗？',
+              q: 'Q2：API调用层面官方价格比 OpenRouter 便宜吗？',
               a: '价格完全相同。OpenRouter → OpenAI 与官方直连价格一致。OpenRouter 额外优势：Azure/GCP 路由提供 Zero retention 合规选项，缓存命中优化（GPT-5.4-mini 实际均价降 67%），OpenAI+Anthropic 统一账单。',
             },
             {
