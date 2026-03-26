@@ -127,10 +127,10 @@ export default function Home() {
             />
           </Card>
           <div className="flex flex-col gap-4">
-            <div className="bg-blue-600 rounded-xl border border-blue-600 shadow-sm p-5">
-              <div className="text-3xl font-bold text-white mb-1">$2,000</div>
-              <div className="text-white text-sm font-medium">推荐月度总成本</div>
-              <div className="text-blue-100 text-xs mt-2">约 ¥14,500/月</div>
+            <div className="rounded-xl border border-slate-100 shadow-sm p-5">
+              <div className="text-3xl font-bold mb-1">$2,000</div>
+              <div className="text-sm font-medium">推荐月度总成本</div>
+              <div className="text-xs mt-2">约 ¥14,500/月</div>
             </div>
             <Card>
               <div className="text-2xl font-bold text-slate-900 mb-1">45席</div>
