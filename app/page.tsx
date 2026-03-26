@@ -74,6 +74,7 @@ function Tbl({ headers, rows, hi }: { headers: string[]; rows: string[][]; hi?: 
 
 export default function Home() {
   const [activeQ, setActiveQ] = useState<number | null>(null)
+  const [activeImg, setActiveImg] = useState<{ src: string; label: string } | null>(null)
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
@@ -264,6 +265,17 @@ export default function Home() {
             </div>
             <p className="text-amber-700 text-sm">全新 ChatGPT Business（Team）账号，使用 GPT-5.4 + GPT-5.3-Codex 进行重度编码，<strong>5小时内即用尽限额</strong>，5小时窗口与周限额双重约束同时生效。</p>
           </div>
+          {activeImg && (
+            <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onClick={() => setActiveImg(null)}>
+              <div className="relative max-w-3xl w-full" onClick={e => e.stopPropagation()}>
+                <img src={activeImg.src} alt={activeImg.label} className="w-full rounded-lg shadow-2xl" />
+                <p className="text-white text-sm text-center mt-3">{activeImg.label}</p>
+                <button onClick={() => setActiveImg(null)} className="absolute -top-3 -right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg" aria-label="关闭">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+            </div>
+          )}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               { label: '全新账号初始额度', src: '/images/new_team_account.png' },
@@ -271,7 +283,7 @@ export default function Home() {
               { label: '5小时限额用尽', src: '/images/5_hours_out_of_quota.png' },
               { label: 'Token 使用详情', src: '/images/5_hours_limit_token_usage.png' },
             ].map((item, i) => (
-              <div key={i} className="border border-slate-200 rounded-lg overflow-hidden">
+              <div key={i} className="border border-slate-200 rounded-lg overflow-hidden cursor-zoom-in hover:border-blue-300 transition-colors" onClick={() => setActiveImg(item)}>
                 <img src={item.src} alt={item.label} className="w-full object-cover" />
                 <p className="text-xs text-slate-600 text-center py-2 px-1">{item.label}</p>
               </div>
