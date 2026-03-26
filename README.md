@@ -4,6 +4,8 @@
 
 **在线访问：** https://gpt-codex-research-web.vercel.app
 
+**调研报告文档：** [docs/report.md](./docs/report.md)
+
 **调研报告仓库：** https://github.com/GOD-OF-PPT/team-gpt-research
 
 ## 内容概览
