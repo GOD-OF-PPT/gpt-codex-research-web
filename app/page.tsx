@@ -266,14 +266,14 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              '全新账号初始额度',
-              '周额度剩余',
-              '5小时限额用尽',
-              'Token 使用详情',
-            ].map((label, i) => (
-              <div key={i} className="border border-slate-200 rounded-lg p-3 text-center">
-                <div className="w-full h-20 bg-slate-100 rounded mb-2 flex items-center justify-center text-slate-400 text-xs">截图</div>
-                <p className="text-xs text-slate-600">{label}</p>
+              { label: '全新账号初始额度', src: '/images/new_team_account.png' },
+              { label: '周额度剩余', src: '/images/week_quota_left.png' },
+              { label: '5小时限额用尽', src: '/images/5_hours_out_of_quota.png' },
+              { label: 'Token 使用详情', src: '/images/5_hours_limit_token_usage.png' },
+            ].map((item, i) => (
+              <div key={i} className="border border-slate-200 rounded-lg overflow-hidden">
+                <img src={item.src} alt={item.label} className="w-full object-cover" />
+                <p className="text-xs text-slate-600 text-center py-2 px-1">{item.label}</p>
               </div>
             ))}
           </div>
