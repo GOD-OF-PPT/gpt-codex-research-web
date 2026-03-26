@@ -99,7 +99,7 @@ export default function Home() {
                 查看结论
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              <a href="https://github.com/GOD-OF-PPT/gpt-codex-research-web" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/GOD-OF-PPT/gpt-codex-research-web/blob/main/docs/report.md" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-slate-200 text-slate-700 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-colors">
                 查看报告源文件
               </a>
